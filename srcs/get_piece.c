@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 19:33:55 by lmarques          #+#    #+#             */
-/*   Updated: 2018/01/07 03:53:49 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/01/08 00:07:38 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int		read_data(t_filler *f)
 	if (!f->curr_map)
 		if (!init_map(f))
 			return (0);
-	if (!init_map(f) || !get_piece(f))
+	if (!refresh_map(f) || !get_piece(f))
 		return (0);
 	return (1);
 }

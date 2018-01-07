@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 18:48:08 by lmarques          #+#    #+#             */
-/*   Updated: 2018/01/07 17:59:09 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/01/08 00:05:44 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 void	get_enemy_last_pos(t_filler *f)
 {
-	t_point	p;
 	char	enemy_sign;
+	t_point	p;
 
-	p.y = -1;
 	enemy_sign = f->p_sign == 'O' ? 'X' : 'O';
+	p.y = -1;
 	while (++p.y < f->map.y)
 	{
 		p.x = -1;

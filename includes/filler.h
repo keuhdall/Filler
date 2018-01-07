@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 01:13:20 by lmarques          #+#    #+#             */
-/*   Updated: 2018/01/07 17:48:04 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/01/08 00:07:35 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct	s_filler
 
 int				init_map(t_filler *f);
 int				read_data(t_filler *f);
+int				refresh_map(t_filler *f);
 int				do_job(t_filler *f);
 int				get_array_length(char **a);
 void			free_array(char **a);
