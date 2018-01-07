@@ -6,11 +6,11 @@
 #*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/11/19 05:25:46 by lmarques          #+#    #+#             *#
-#*   Updated: 2018/01/06 03:42:54 by lmarques         ###   ########.fr       *#
+#*   Updated: 2018/01/07 16:49:52 by lmarques         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
-NAME=push_swap
+NAME=lmarques.filler
 
 SRC_PATH=./srcs
 INC_PATH=./includes
@@ -18,6 +18,8 @@ OBJ_PATH=./objs
 LIBFT_PATH=./libft
 
 SRC_NAME = filler.c \
+			get_piece.c \
+			place.c \
 			utils.c \
 
 OBJ_NAME = $(SRC_NAME:.c=.o)

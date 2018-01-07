@@ -35,6 +35,7 @@ SRC = ft_atoi.c \
 	  ft_putstr.c \
 	  ft_putstr_fd.c \
 	  ft_realloc.c \
+	  ft_sqrt.c \
 	  ft_strcat.c \
 	  ft_strchr.c \
 	  ft_strclr.c \

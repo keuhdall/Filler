@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 01:15:58 by lmarques          #+#    #+#             */
-/*   Updated: 2018/01/07 03:55:12 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/01/07 21:09:31 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	get_infos(t_filler *f, int	*e)
 	f->p_sign = f->p == 1 ? 'O' : 'X';
 	free(l);
 	get_next_line(0, &l);
-	if (get_array_length(split = ft_strsplit(l, ' ')) != 3)
+	if (get_array_length(split = ft_strsplit(l, ' ')) >= 3)
 	{
 		f->map.x = ft_atoi(split[1]);
 		f->map.y = ft_atoi(split[2]);
@@ -52,7 +52,8 @@ int	main(void)
 	}
 	while (1)
 	{
-		
+		if (!do_job(&f))
+			break ;
 	}
 	return (0);
 }
