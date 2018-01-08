@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 01:15:58 by lmarques          #+#    #+#             */
-/*   Updated: 2018/01/07 21:09:31 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/01/08 00:25:06 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	get_infos(t_filler *f, int	*e)
 	get_next_line(0, &l);
 	if (get_array_length(split = ft_strsplit(l, ' ')) >= 3)
 	{
-		f->map.x = ft_atoi(split[1]);
-		f->map.y = ft_atoi(split[2]);
+		f->map.x = ft_atoi(split[2]);
+		f->map.y = ft_atoi(split[1]);
 	}
 	else
 		*e = 1;
