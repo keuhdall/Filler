@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 01:13:20 by lmarques          #+#    #+#             */
-/*   Updated: 2018/01/08 00:07:35 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/06 14:55:32 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct	s_filler
 	int			dist;
 	t_point		pos;
 	t_point		final_pos;
-	t_point		enemy;
+	t_point		enemy_pos;
 	t_point		p_size;
 	t_point		map;
 }				t_filler;

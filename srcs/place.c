@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 18:48:08 by lmarques          #+#    #+#             */
-/*   Updated: 2018/01/08 00:05:44 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/06 15:01:43 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	get_enemy_last_pos(t_filler *f)
 			if (f->past_map[p.y][p.x] == '.' &&
 				f->curr_map[p.y][p.x] == enemy_sign)
 			{
-				f->enemy = p;
+				f->enemy_pos = p;
 				return ;
 			}
 		}
@@ -38,9 +38,11 @@ void	get_enemy_last_pos(t_filler *f)
 int		is_valid_pos(t_filler *f)
 {
 	char	is_valid;
+	char	enemy_sign;
 	t_point	p;
 
 	is_valid = 0;
+	enemy_sign = f->p_sign == 'O' ? 'X' : 'O';
 	p.y = -1;
 	while (++p.y < f->p_size.y)
 	{
@@ -52,22 +54,22 @@ int		is_valid_pos(t_filler *f)
 				p.y + f->pos.y >= f->map.y || p.x + f->pos.x >= f->map.x))
 				return (0);
 			if (f->piece[p.y][p.x] == '*' &&
-				f->piece[p.y + f->pos.y][p.x + f->pos.x] != f->p_sign)
+				f->curr_map[p.y + f->pos.y][p.x + f->pos.x] == enemy_sign)
 				return (0);
 			if (f->piece[p.y][p.x] == '*' &&
-				f->piece[p.y + f->pos.y][p.x + f->pos.x] == f->p_sign)
-				is_valid = 1;
+				f->curr_map[p.y + f->pos.y][p.x + f->pos.x] == f->p_sign)
+				is_valid++;
 		}
 	}
-	return (is_valid);
+	return (is_valid == 1 ? 1 : 0);
 }
 
 int		get_dist(t_filler *f)
 {
 	t_point	p;
 
-	p.x = f->pos.x - f->enemy.x;
-	p.y = f->pos.y - f->enemy.y;
+	p.x = f->pos.x - f->enemy_pos.x;
+	p.y = f->pos.y - f->enemy_pos.y;
 	if (ft_sqrt(p.x * p.x + p.y * p.y) < f->dist)
 	{
 		f->dist = ft_sqrt(p.x * p.x + p.y * p.y);
@@ -82,6 +84,8 @@ int		place_piece(t_filler *f)
 
 	placed = 0;
 	f->dist = 3000;
+	f->final_pos.x = 3000;
+	f->final_pos.y = 3000;
 	f->pos.y = -f->p_size.y - 1;
 	while (++f->pos.y < f->map.y)
 	{

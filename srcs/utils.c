@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 03:25:24 by lmarques          #+#    #+#             */
-/*   Updated: 2018/01/07 03:25:48 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/06 15:36:39 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,15 @@ int		init_map(t_filler *f)
 	int	count;
 
 	count = -1;
-	if (!(f->past_map = (char **)malloc(sizeof(char *) * f->map.y + 1)) ||
-		(!(f->curr_map = (char **)malloc(sizeof(char *) * f->map.y + 1))))
+	if (!(f->past_map = (char **)malloc(sizeof(char *) * f->map.y)) ||
+		(!(f->curr_map = (char **)malloc(sizeof(char *) * f->map.y))))
 		return (0);
 	while (++count < f->map.y)
 	{
-		if (!(f->past_map[count] = (char *)malloc(sizeof(char) * f->map.y)) ||
-			(!(f->curr_map[count] = (char *)malloc(sizeof(char) * f->map.y))))
+		if (!(f->past_map[count] = (char *)malloc(sizeof(char) * f->map.x)) ||
+			(!(f->curr_map[count] = (char *)malloc(sizeof(char) * f->map.x))))
 			return (0);
 	}
-	f->past_map[f->map.y] = 0;
-	f->curr_map[f->map.y] = 0;
 	return (1);
 }
 
