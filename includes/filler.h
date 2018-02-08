@@ -6,14 +6,14 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 01:13:20 by lmarques          #+#    #+#             */
-/*   Updated: 2018/02/08 16:16:44 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/08 17:35:33 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILLER_H
 # define FILLER_H
 
-#include "../libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct	s_point
 {

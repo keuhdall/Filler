@@ -6,13 +6,13 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 01:15:58 by lmarques          #+#    #+#             */
-/*   Updated: 2018/02/08 16:19:00 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/08 17:34:54 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
 
-void	get_infos(t_filler *f, int	*e)
+void	get_infos(t_filler *f, int *e)
 {
 	char	*l;
 	char	**split;
@@ -37,7 +37,7 @@ void	get_infos(t_filler *f, int	*e)
 	f->start = 1;
 }
 
-int	main(void)
+int		main(void)
 {
 	t_filler	f;
 	int			e;

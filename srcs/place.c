@@ -6,12 +6,11 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 18:48:08 by lmarques          #+#    #+#             */
-/*   Updated: 2018/02/08 16:18:56 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/08 17:36:00 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
-#include <stdio.h>
 
 void	get_enemy_last_pos(t_filler *f)
 {
@@ -115,7 +114,6 @@ int		do_job(t_filler *f)
 		ft_putendl("0 0");
 		return (0);
 	}
-	//printf("%d %d\n", f->final_pos.y, f->final_pos.x);//printf
 	ft_putnbr(f->final_pos.y);
 	ft_putchar(' ');
 	ft_putnbr(f->final_pos.x);
