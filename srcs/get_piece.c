@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 19:33:55 by lmarques          #+#    #+#             */
-/*   Updated: 2018/02/06 15:48:41 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/08 04:23:59 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int		get_piece(t_filler *f)
 	count = 6;
 	get_next_line(0, &l);
 	f->p_size.y = ft_atoi(l + count);
-	while (l[count++] != ' ')
-		continue;
+	while (l[count] != ' ')
+		count++;
 	f->p_size.x = ft_atoi(l + count + 1);
 	if (!init_piece(f, l))
 		return (0);
