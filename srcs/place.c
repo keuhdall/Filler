@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 18:48:08 by lmarques          #+#    #+#             */
-/*   Updated: 2018/02/08 17:36:00 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/08 17:51:15 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,9 +82,9 @@ int		place_piece(t_filler *f)
 	char	placed;
 
 	placed = 0;
-	f->dist = 3000;
-	f->final_pos.x = 3000;
-	f->final_pos.y = 3000;
+	f->dist = 1000;
+	f->final_pos.x = 1000;
+	f->final_pos.y = 1000;
 	f->pos.y = -f->p_size.y - 1;
 	while (++f->pos.y < f->map.y)
 	{
