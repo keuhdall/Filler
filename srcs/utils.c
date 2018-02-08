@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 03:25:24 by lmarques          #+#    #+#             */
-/*   Updated: 2018/02/06 15:36:39 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/08 16:18:22 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,22 @@ int		get_array_length(char **a)
 	return (count);
 }
 
-void	free_array(char **a)
+void	free_split(char **a)
 {
 	int	count;
 
 	count = -1;
 	while (a[++count])
+		free(a[count]);
+	free(a);
+}
+
+void	free_array(char **a, int len)
+{
+	int	count;
+
+	count = -1;
+	while (++count < len)
 		free(a[count]);
 	free(a);
 }

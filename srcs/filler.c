@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 01:15:58 by lmarques          #+#    #+#             */
-/*   Updated: 2018/02/06 15:19:37 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/08 16:19:00 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	get_infos(t_filler *f, int	*e)
 	}
 	else
 		*e = 1;
-	free_array(split);
+	free_split(split);
 	free(l);
 	f->past_map = NULL;
 	f->curr_map = NULL;

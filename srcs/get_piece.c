@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 19:33:55 by lmarques          #+#    #+#             */
-/*   Updated: 2018/02/08 04:23:59 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/08 16:18:50 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		get_piece(t_filler *f)
 	char	*l;
 
 	if (f->piece)
-		free_array(f->piece);
+		free_array(f->piece, f->p_size.y);
 	count = 6;
 	get_next_line(0, &l);
 	f->p_size.y = ft_atoi(l + count);

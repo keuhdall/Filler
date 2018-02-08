@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 18:48:08 by lmarques          #+#    #+#             */
-/*   Updated: 2018/02/08 03:34:03 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/08 16:18:56 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,10 +115,10 @@ int		do_job(t_filler *f)
 		ft_putendl("0 0");
 		return (0);
 	}
-	printf("%d %d\n", f->final_pos.x, f->final_pos.y);//printf
-	//ft_putnbr(f->final_pos.x);
-	//ft_putchar(' ');
-	//ft_putnbr(f->final_pos.y);
-	//final_posft_putchar('\n');
+	//printf("%d %d\n", f->final_pos.y, f->final_pos.x);//printf
+	ft_putnbr(f->final_pos.y);
+	ft_putchar(' ');
+	ft_putnbr(f->final_pos.x);
+	ft_putchar('\n');
 	return (1);
 }
