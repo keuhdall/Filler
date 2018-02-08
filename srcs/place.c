@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 18:48:08 by lmarques          #+#    #+#             */
-/*   Updated: 2018/02/06 15:01:43 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/08 03:34:03 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ void	get_enemy_last_pos(t_filler *f)
 
 int		is_valid_pos(t_filler *f)
 {
-	char	is_valid;
 	char	enemy_sign;
+	char	is_valid;
 	t_point	p;
 
-	is_valid = 0;
 	enemy_sign = f->p_sign == 'O' ? 'X' : 'O';
+	is_valid = 0;
 	p.y = -1;
 	while (++p.y < f->p_size.y)
 	{

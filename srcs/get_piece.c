@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 19:33:55 by lmarques          #+#    #+#             */
-/*   Updated: 2018/01/08 00:25:24 by lmarques         ###   ########.fr       */
+/*   Updated: 2018/02/06 15:48:41 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,11 @@ int		init_piece(t_filler *f, char *l)
 	int	count;
 
 	count = -1;
-	if (!(f->piece = (char **)malloc(sizeof(char *) * f->p_size.y + 1)))
+	if (!(f->piece = (char **)malloc(sizeof(char *) * f->p_size.y)))
 		return (0);
-	f->piece[f->p_size.y] = 0;
 	while (++count < f->p_size.y)
 	{
-		if (!(f->piece[count] = (char *)malloc(sizeof(char) * f->p_size.x)))
+		if (!(f->piece[count] = (char *)malloc(sizeof(char) * f->p_size.x + 1)))
 			return (0);
 		free(l);
 		get_next_line(0, &l);
